@@ -1,0 +1,144 @@
+:root {
+    --bs-primary: #ff0042;
+    --bs-primary-rgb: 255, 0, 66;
+    --bs-dark: #1f2937;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #fafafa;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-radius: 50rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-radius: 50rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+.btn-outline-light {
+    border-radius: 50rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.navbar-custom {
+    background-color: var(--bs-dark);
+    z-index: 1050;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--bs-primary) !important;
+}
+
+/* Category banners */
+.category-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.category-banner img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.category-banner:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Product Cards */
+.product-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.product-card img {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge-discount {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--bs-primary);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50rem;
+    font-weight: bold;
+}
+
+.badge-cart {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 0.75rem;
+}
+
+/* Specific page elements */
+.product-image {
+    object-fit: cover;
+    border-radius: 1rem;
+    width: 100%;
+    height: 500px;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}

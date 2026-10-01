@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand text-white text-decoration-none" href="index.html">
+                <h2 class="mb-0 fw-bold">VELORA</h2>
+                <span class="fs-6 d-block">ڤيلورا</span>
+            </a>
+            <button class="navbar-toggler border-0 text-white shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainMenu">
+                <i class="fas fa-bars fs-3"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 pe-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfumes.html">العطور</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offers.html">العروض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">الأسئلة الشائعة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown d-none d-lg-block">
+                        <a href="cart.html"
+                            class="text-white text-decoration-none position-relative d-inline-block mt-1"
+                            id="cartDropdown">
+                            <i class="fas fa-shopping-cart fs-4 text-primary"></i>
+                            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger"
+                                style="transform: translate(-25%, -25%);">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-dark text-white py-5 mb-5 text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">سلة المشتريات</h1>
+            <p class="fs-5 text-muted">راجع منتجاتك وأتمم طلبك.</p>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Cart Items -->
+                <div class="col-12 col-lg-8">
+                    <div class="bg-light p-4 rounded-4 shadow-sm">
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle text-nowrap mb-0">
+                                <thead class="border-bottom">
+                                    <tr>
+                                        <th scope="col" class="py-3">المنتج</th>
+                                        <th scope="col" class="py-3">السعر</th>
+                                        <th scope="col" class="py-3">الكمية</th>
+                                        <th scope="col" class="py-3 text-end">الإجمالي</th>
+                                        <th scope="col" class="py-3 text-center">حذف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Item 1 -->
+                                    <tr class="border-bottom">
+                                        <td class="py-4">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="image/velora-rose.jpg" alt="Velora Rose"
+                                                    class="cart-item-img shadow-sm flex-shrink-0">
+                                                <div>
+                                                    <h5 class="fw-bold mb-1">Velora Rose</h5>
+                                                    <small class="text-muted">عطر نسائي</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 fw-bold text-muted">$45.00</td>
+                                        <td class="py-4">
+                                            <div class="input-group input-group-sm" style="width: 120px;">
+                                                <button class="btn btn-outline-secondary px-3" type="button"
+                                                    onclick="this.nextElementSibling.value = parseInt(this.nextElementSibling.value) + 1">+</button>
+                                                <input type="text" class="form-control text-center fw-bold" value="1">
+                                                <button class="btn btn-outline-secondary px-3" type="button"
+                                                    onclick="this.previousElementSibling.value = Math.max(1, parseInt(this.previousElementSibling.value) - 1)">-</button>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 fw-bold text-end text-primary">$45.00</td>
+                                        <td class="py-4 text-center">
+                                            <button class="btn text-danger border-0 p-0 fs-5"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Item 2 -->
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="image/velora-pink.jpg" alt="Velora Pink"
+                                                    class="cart-item-img shadow-sm flex-shrink-0">
+                                                <div>
+                                                    <h5 class="fw-bold mb-1">Velora Pink</h5>
+                                                    <small class="text-muted">عطر للجنسين</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 fw-bold text-muted">$50.00</td>
+                                        <td class="py-4">
+                                            <div class="input-group input-group-sm" style="width: 120px;">
+                                                <button class="btn btn-outline-secondary px-3" type="button"
+                                                    onclick="this.nextElementSibling.value = parseInt(this.nextElementSibling.value) + 1">+</button>
+                                                <input type="text" class="form-control text-center fw-bold" value="2">
+                                                <button class="btn btn-outline-secondary px-3" type="button"
+                                                    onclick="this.previousElementSibling.value = Math.max(1, parseInt(this.previousElementSibling.value) - 1)">-</button>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 fw-bold text-end text-primary">$100.00</td>
+                                        <td class="py-4 text-center">
+                                            <button class="btn text-danger border-0 p-0 fs-5"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-12 col-lg-4">
+                    <div class="bg-light p-4 p-md-5 rounded-4 shadow-sm sticky-top" style="top: 120px; z-index: 1000;">
+                        <h4 class="fw-bold mb-4">ملخص الطلب</h4>
+                        <div class="d-flex justify-content-between mb-3 text-muted">
+                            <span>المجموع الفرعي</span>
+                            <span class="fw-bold">$145.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 text-muted">
+                            <span>الشحن (توصيل قياسي)</span>
+                            <span class="fw-bold">$10.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4 text-muted">
+                            <span>الضريبة (15%)</span>
+                            <span class="fw-bold">$21.75</span>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="d-flex justify-content-between mb-4 fs-4">
+                            <span class="fw-bold">الإجمالي الكلي</span>
+                            <span class="fw-bold text-primary">$176.75</span>
+                        </div>
+                        <button class="btn btn-primary w-100 py-3 fs-5">إتمام الطلب والدفع</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top bg-white pt-5 mt-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <h2 class="display-5 fw-bold mb-0">VELORA</h2>
+                <span class="fs-5 text-muted">ڤيلورا</span>
+            </div>
+            <p class="fs-5 mb-4">عطور تترك أثرًا لا يُنسى.</p>
+            <div class="d-flex justify-content-center gap-4 flex-wrap mb-5">
+                <a href="index.html" class="text-decoration-none text-dark fw-bold hover-primary">الرئيسية</a>
+                <a href="about.html" class="text-decoration-none text-dark fw-bold">من نحن</a>
+                <a href="perfumes.html" class="text-decoration-none text-dark fw-bold">العطور</a>
+                <a href="offers.html" class="text-decoration-none text-dark fw-bold">العروض</a>
+                <a href="services.html" class="text-decoration-none text-dark fw-bold">الخدمات</a>
+                <a href="faq.html" class="text-decoration-none text-dark fw-bold">الأسئلة الشائعة</a>
+                <a href="contact.html" class="text-decoration-none text-dark fw-bold">تواصل معنا</a>
+            </div>
+        </div>
+        <div class="bg-dark text-white py-3">
+            <div class="container text-center"><small class="mb-0">© 2026 VELORA — جميع الحقوق محفوظة</small></div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
